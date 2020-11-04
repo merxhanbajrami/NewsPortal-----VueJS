@@ -1,12 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header/>
+    <Footer/>
   </div>
 </template>
+
+<script>
+  import Header from "./components/Header";
+  import VueRouter from 'vue-router';
+  import Footer from "/Users/macbookpro/Desktop/Bootcamp2020/portalvue/src/components/footer.vue"
+  import Vue from 'vue';
+  Vue.use(VueRouter);
+  export default {
+    name: 'App',
+    data(){
+      return{
+        news:undefined,
+      }
+    },
+    components: {
+      Header,
+      Footer
+    },
+    created(){
+      this.$store.dispatch('loadNewsData')
+    }
+  }
+</script>
 
 <style>
 #app {

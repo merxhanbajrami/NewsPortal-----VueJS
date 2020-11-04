@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import  "/Users/macbookpro/Desktop/Bootcamp2020/portalvue/node_modules/bootstrap/dist/css/bootstrap.css";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,
